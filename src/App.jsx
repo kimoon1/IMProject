@@ -1,7 +1,15 @@
 import React from 'react';
+import Home from './routes/Home';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
-  return <div>메인페이지 입니다.</div>;
+  return (
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
