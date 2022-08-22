@@ -6,5 +6,5 @@ NAVER 카페주소 [CODECLAN](https://cafe.naver.com/lolcodeclan) 입니다.
 
 ### 와이어 프레임
 
-<img src='./메인페이지.png' width="400" height="400" />
-<img src='./내전 통계 입력 페이지.png' width="400" height="400" />
+![메인페이지](./%EB%A9%94%EC%9D%B8%ED%8E%98%EC%9D%B4%EC%A7%80.png)
+![내전통계입력](./%EB%82%B4%EC%A0%84%20%ED%86%B5%EA%B3%84%20%EC%9E%85%EB%A0%A5%20%ED%8E%98%EC%9D%B4%EC%A7%80.png)
