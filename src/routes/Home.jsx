@@ -60,43 +60,117 @@ function Home() {
     console.log(blueData);
   };
   return (
-    <main onSubmit={onSubmit}>
-      <h2>Code Clan</h2>
-      <div className='container'>
-        <form>
-          <input type='date' name='gameInfoDate' />
+    <>
+      <TitleH2>내전 전적 입력</TitleH2>
+      <StyleInfoForm onSubmit={onSubmit}>
+        <div className='container'>
           <GamerBox>
-            <span>탑</span>
-            <input type='text' name='redTopMember' />
-            <span>정글</span>
-            <input type='text' name='redJgMember' />
-            <span>미드</span>
-            <input type='text' name='redMidMember' />
-            <span>원딜</span>
-            <input type='text' name='redAdMember' />
-            <span>서폿</span>
-            <input type='text' name='redSupMember' />
+            <h4>블루진영</h4>
+            <StyledLineBox>
+              <StyledSpan>탑</StyledSpan>
+              <StyledInput type='text' name='redTopMember' />
+            </StyledLineBox>
+            <StyledLineBox>
+              <StyledSpan>정글</StyledSpan>
+              <StyledInput type='text' name='redJgMember' />
+            </StyledLineBox>
+            <StyledLineBox>
+              <StyledSpan>미드</StyledSpan>
+              <StyledInput type='text' name='redMidMember' />
+            </StyledLineBox>
+            <StyledLineBox>
+              <StyledSpan>원딜</StyledSpan>
+              <StyledInput type='text' name='redAdMember' />
+            </StyledLineBox>
+            <StyledLineBox>
+              <StyledSpan>서폿</StyledSpan>
+              <StyledInput type='text' name='redSupMember' />
+            </StyledLineBox>
           </GamerBox>
           <GamerBox>
-            <span>탑</span>
-            <input type='text' name='blueTopMember' />
-            <span>정글</span>
-            <input type='text' name='blueJgMember' />
-            <span>미드</span>
-            <input type='text' name='blueMidMember' />
-            <span>원딜</span>
-            <input type='text' name='blueAdMember' />
-            <span>서폿</span>
-            <input type='text' name='blueSupMember' />
+            <h4>레드진영</h4>
+            <StyledLineBox>
+              <StyledSpan>탑</StyledSpan>
+              <StyledInput type='text' name='blueTopMember' />
+            </StyledLineBox>
+            <StyledLineBox>
+              <StyledSpan>정글</StyledSpan>
+              <StyledInput type='text' name='blueJgMember' />
+            </StyledLineBox>
+            <StyledLineBox>
+              <StyledSpan>미드</StyledSpan>
+              <StyledInput type='text' name='blueMidMember' />
+            </StyledLineBox>
+            <StyledLineBox>
+              <StyledSpan>원딜</StyledSpan>
+              <StyledInput type='text' name='blueAdMember' />
+            </StyledLineBox>
+            <StyledLineBox>
+              <StyledSpan>서폿</StyledSpan>
+              <StyledInput type='text' name='blueSupMember' />
+            </StyledLineBox>
           </GamerBox>
-          <input type='submit' value='작성하기' />
-        </form>
-      </div>
-    </main>
+        </div>
+        <BanBox>밴영역</BanBox>
+        <SubContainer>
+          <SubBox>
+            <StyledSpan>게임 종료 시간</StyledSpan>
+            <StyledInput type='text' />
+          </SubBox>
+          <SubBox>
+            <StyledSpan>MVP</StyledSpan>
+            <StyledInput type='text' />
+          </SubBox>
+        </SubContainer>
+        <StyledBtn type='submit' className='submit' value='작성하기' />
+      </StyleInfoForm>
+    </>
   );
 }
 
 export default Home;
+
+const TitleH2 = styled.h2`
+  margin: 0 auto;
+  margin-top: 100px;
+  text-align: center;
+`;
+const StyleInfoForm = styled.form`
+  width: 1000px;
+
+  border: 2px solid #e6e6e6;
+
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+  margin-top: 100px;
+  .container {
+    width: 830px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0 auto;
+  }
+  div {
+    border-radius: 15px;
+  }
+  input {
+    border: 1px solid #717171;
+    border-radius: 10px;
+    outline: none;
+    box-sizing: border-box;
+
+    &:focus {
+      border: 2px solid #796dfb;
+    }
+  }
+  .submit {
+    border-radius: 15px;
+  }
+`;
 
 const GamerBox = styled.div`
   width: 400px;
@@ -104,5 +178,69 @@ const GamerBox = styled.div`
   display: inline-flex;
   flex-direction: column;
 
+  border: 1px solid #e6e6e6;
+  margin-top: 20px;
+
+  h4 {
+    margin: 10px auto;
+  }
+`;
+
+const StyledSpan = styled.span`
+  width: 150px;
+
+  display: inline-block;
+`;
+
+const StyledLineBox = styled.div`
+  margin: 5px auto;
+`;
+const StyledInput = styled.input`
+  width: 200px;
+  height: 20px;
+`;
+
+const BanBox = styled.div`
+  width: 830px;
+  height: 70px;
+
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+
+  margin: 10px auto;
+
+  display: flex;
+`;
+
+const StyledBtn = styled.input`
+  width: 200px;
+  height: 70px;
+
   border: 2px solid #e6e6e6;
+  background-color: #fff;
+
+  margin: 10px auto;
+
+  &:hover {
+    background-color: #464646;
+    color: #fff;
+  }
+`;
+const SubContainer = styled.div`
+  width: 830px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0 auto;
+`;
+const SubBox = styled.div`
+  width: 400px;
+  height: 40px;
+
+  border: 1px solid #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
