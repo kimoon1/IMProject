@@ -22,7 +22,7 @@ function MvpMember({ Infos }) {
       maxMvp = [key, mvpMembers[key]];
     }
   }
-  console.log(maxMvp);
+  // console.log(maxMvp);
   return (
     <MvpContainer>
       <MvpMemberBox>
