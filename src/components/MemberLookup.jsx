@@ -26,7 +26,7 @@ function MemberLookup({ Infos }) {
       }
     }
   }
-  console.log(members);
+  // console.log(members);
   useEffect(() => {}, []);
   return (
     <AsideContainer>

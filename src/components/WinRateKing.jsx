@@ -39,6 +39,7 @@ function WinRateKing({ Infos }) {
   // console.log(data);
   return (
     <WinRateContainer>
+      <li>내전 승률 King</li>
       <li>{data.length !== 0 ? `1등 ${data[0][0]} [${data[0][1]}]%` : ''}</li>
       <li>{data.length !== 0 ? `2등 ${data[1][0]} [${data[1][1]}]%` : ''}</li>
       <li>{data.length !== 0 ? `3등 ${data[2][0]} [${data[2][1]}]%` : ''}</li>
@@ -51,14 +52,14 @@ export default WinRateKing;
 const WinRateContainer = styled.ul`
   max-width: 900px;
   width: 100%;
-  height: 150px;
+  height: 200px;
 
   color: #fff;
   font-size: 20px;
   font-weight: bold;
   background-color: #32aaff;
 
-  margin-top: 0;
+  margin: 0;
   padding: 0;
 
   border: 2px solid #e6e6e6;
@@ -67,12 +68,22 @@ const WinRateContainer = styled.ul`
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   li {
     width: 200px;
 
     list-style: none;
     margin: 5px 0;
+  }
+  li:first-child {
+    width: 100%;
+
+    padding-bottom: 5px;
+
+    font-size: 30px;
+    text-align: center;
+
+    border-bottom: 2px solid #fff;
   }
 `;
