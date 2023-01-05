@@ -2,7 +2,7 @@
 
 NAVER 카페주소 [CODECLAN](https://cafe.naver.com/lolcodeclan) 입니다.
 
-[배포 사이트 https://kimoon1.github.io/codeclan.github.io/](https://kimoon1.github.io/codeclan.github.io/)
+[배포 사이트 https://kimoon1.github.io/codeclan](https://kimoon1.github.io/codeclan/)
 
 ### 와이어 프레임
 
